@@ -5,6 +5,7 @@ import { Button } from "./components/Button"
 import { InfoItem } from "./components/InfoItem"
 import { useEffect, useState } from "react"
 import { GridItem } from "./types/GridItem"
+import { items } from "./data/items"
 
 function App() {
 
@@ -19,7 +20,40 @@ function App() {
   }, [])
 
   const resetAndCreateGrid = () => {
+    //restar o jogo
+    setTimeElapsed(0)
+    setMoveCount(0)
+    setShownCount(0)
 
+    //Criando Grid
+
+    //criar grid vazio
+    let tmpGrid: GridItem[] = []
+    for(let i = 0; i < (items.length * 2); i++){
+      tmpGrid.push({
+        item: null,
+        shown: false,
+        permanentShown: false
+      })
+    }
+
+    //preencher grid
+    for(let w = 0; w < 2; w++){
+      for(let i = 0; i < items.length; i++){
+        let pos = -1
+        while(pos < 0 || tmpGrid[pos].item !== null) {
+          pos = Math.floor(Math.random() * (items.length * 2))
+        }
+        
+        tmpGrid[pos].item = i;
+      }
+    }
+
+    //Jogar no State
+    setGridItems(tmpGrid)
+
+    //começando o jogo
+    setPlaying(true)
   }
 
   return (
