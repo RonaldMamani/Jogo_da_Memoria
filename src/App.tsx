@@ -6,6 +6,7 @@ import { InfoItem } from "./components/InfoItem"
 import { useEffect, useState } from "react"
 import { GridItem } from "./types/GridItem"
 import { items } from "./data/items"
+import { GridItems } from "./components/GridItem"
 
 function App() {
 
@@ -56,6 +57,10 @@ function App() {
     setPlaying(true)
   }
 
+  const handleItemClick = (index: number) => {
+
+  }
+
   return (
     <Container>
       <Info>
@@ -71,7 +76,13 @@ function App() {
       </Info>
       <GridArea>
         <Grid>
-
+          {gridItems.map((item, index) => (
+            <GridItems 
+              key={index}
+              item={item}
+              onClick={() => handleItemClick(index)}
+            />
+          ))}
         </Grid>
       </GridArea>
     </Container>
