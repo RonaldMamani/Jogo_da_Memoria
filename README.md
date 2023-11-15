@@ -1,27 +1,36 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Jogo da Memoria 
 
-Currently, two official plugins are available:
+Projeto realizado com ReactJs com Typescript e styledComponents, o projeto e um jogo da Memoria feito durante o curso da B7Web, o projeto se trata do Jogo da Memoria com Tempo e contagem de Movimentos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Deploy
 
-## Expanding the ESLint configuration
+O Projeto está em hospedagem na Vercel o link esta abaixo:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Link: https://jogo-da-memoria-sepia.vercel.app/
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Instalação
+
+Instalação das dependencias do projeto
+
+```bash
+  npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Rodar o Codigo do Projeto
+
+```
+    npm run dev
+```
+    
+## Aprendizados
+
+O Aprendizado foi bom durante o curso, aprendemos a utilização de outros hooks como useEffect e solificamos conhecimentos com useState, utilizamos muita logica para aplicar regras padrões no jogo da memoria.
+
+
+## Autores
+
+- [RonaldMamani](https://github.com/RonaldMamani)
+- B7Web
+
