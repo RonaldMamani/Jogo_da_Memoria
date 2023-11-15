@@ -21,5 +21,5 @@ type IconProps = {
 export const Icon = styled.img<IconProps>`
     width: 40px;
     width: 40px;
-    opacity: ${props => props.opacity ? props.opacity : 1};
+    opacity: ${props => props.opacity ?? 1};
 `
